@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+      - name: Swift tests
+        run: swift test
+      - name: Shell syntax
+        run: |
+          for script in scripts/*.sh; do
+            zsh -n "$script"
+          done
+      - name: Disposable install test
+        run: ./scripts/test-install.sh
+      - name: Checkout-independent installer test
+        run: ./scripts/test-install-latest.sh
+      - name: Disposable uninstall test
+        run: ./scripts/test-uninstall.sh
+      - name: Disposable DMG test
+        run: ./scripts/test-release.sh

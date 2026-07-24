@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleExecutable</key>
+    <string>HeyCodex</string>
+    <key>CFBundleDisplayName</key>
+    <string>Hey Codex</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.mukulmalik.heycodex</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleIconFile</key>
+    <string>HeyCodex.icns</string>
+    <key>CFBundleName</key>
+    <string>Hey Codex</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Hey Codex listens locally for your wake phrase.</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>Hey Codex uses System Events to restore your original app and cursor after dictation.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>Hey Codex uses on-device speech recognition only to detect your wake phrase.</string>
+</dict>
+</plist>
